@@ -1,0 +1,13 @@
+## Esquema Eléctrico
+
+Esta carpeta contiene los diagramas circuitales completos del amplificador de instrumentación de tres amplificadores operacionales (TL084N, ganancia diferencial nominal = 21), desarrollados en KiCad bajo simbología estándar, incluyendo la asignación de pines, alimentación dual (12V), capacitores de desacople (100nF) y configuración del cuarto op-amp no utilizado como seguidor a GND.
+
+Los archivos se encuentran organizados según las tres configuraciones experimentales de la guía:
+
+* Etapa A – Montaje y verificación de offset (`LAB3-A`): Entradas V1 y V2 conectadas directamente a `GND` para verificar la ausencia de saturación en Vout.
+* Etapa B – Respuesta a señal diferencial (`LAB3-B`): Entrada V2 a `GND` y V1 conectada al divisor de tensión (RD1 = 10k ohm, RD2 = 100 ohm alimentado por el generador (10 mVpp a 60Hz), obteniendo una señal diferencial de 10 mVpp.
+* Etapa C – Respuesta a señal de modo común (`LAB3-C`): Entradas cortocircuitadas entre sí (V1 = V2) y conectadas directamente a la señal de interferencia simulada de $1\text{ V}_{pp}$ a $60\text{ Hz}$ para evaluar el rechazo de modo común (CMRR)[cite: 2, 4, 14].
+
+### Formatos disponibles
+* Archivos fuente (`.kicad_sch`): Esquemáticos nativos editables para inspección y simulación en KiCad (`IBIII-LAB3-B.kicad_sch`, `IBIII-LAB3-C.kicad_sch`)
+* Exportaciones gráficas (`.pdf` / `.png`): Versiones de alta resolución listas para visualización directa sin necesidad de software CAD (`Esquematico LAB3-A/B/C`).
